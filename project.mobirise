@@ -1,0 +1,172 @@
+{
+  "settings": {
+    "name": "Site-01-05_1303",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "politicsm4",
+      "title": "PoliticsM4",
+      "titlePreset": "Candidate",
+      "nameSelectPreset": "candidate",
+      "styling": {
+        "primaryColor": "#255085",
+        "secondaryColor": "#ed4266",
+        "successColor": "#f1894c",
+        "infoColor": "#82786E",
+        "warningColor": "#36404c",
+        "dangerColor": "#B1A374",
+        "mainFont": "Poppins",
+        "display1Font": "Poppins",
+        "display1Size": 2.5,
+        "display2Font": "Poppins",
+        "display2Size": 2.2,
+        "display5Font": "Poppins",
+        "display5Size": 1.3,
+        "display7Font": "Poppins",
+        "display7Size": 1.1,
+        "display4Font": "Poppins",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.11.4",
+    "siteFonts": [],
+    "uniqCompNum": 3,
+    "versionPublish": "4.11.4",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            ".mbr-overlay": {
+              "background-color": "@overlayColor",
+              "opacity": "@overlayOpacity"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "textarea": {
+              "min-height": "150px"
+            },
+            ".form-col": {
+              "background": "@formbg",
+              "padding": "3rem 1rem"
+            },
+            ".form-wrap": {
+              "max-width": "520px",
+              "margin": "auto"
+            },
+            ".text-wrap": {
+              "max-width": "400px",
+              "border": "2px solid @border",
+              "padding": "3rem",
+              "margin": "4rem auto!important"
+            },
+            "@media (max-width: 992px)": {
+              ".form-wrap": {
+                "max-width": "690px"
+              },
+              ".md-pb": {
+                "padding-bottom": "3rem"
+              },
+              ".text-wrap": {
+                "max-width": "690px"
+              }
+            },
+            ".mbr-section-btn": {
+              "margin": "0.4rem",
+              "padding-top": "1.5rem"
+            },
+            ".line": {
+              "width": "35px",
+              "height": "3px",
+              "display": "inline-block",
+              "background": "@lineColor",
+              "transition": "background 0.3s",
+              "margin-bottom": "2rem"
+            },
+            "& when (@customStyle)": {
+              ".form-control, .field-input": {
+                "padding": "0.5rem 1.2rem",
+                "background-color": "@fieldColor",
+                "border": "3px solid @borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "font-size": "0.9rem",
+                "box-shadow": "none",
+                "outline": "none",
+                "&:hover, &:focus": {
+                  "background-color": "@fieldHover",
+                  "border": "3px solid @borderColor",
+                  "box-shadow": "none",
+                  "outline": "none"
+                }
+              },
+              "input::-webkit-input-placeholder, textarea::-webkit-input-placeholder": {
+                "color": "@formPlaceholder"
+              },
+              "input:-moz-placeholder, textarea:-moz-placeholder": {
+                "color": "@formPlaceholder"
+              },
+              ".jq-selectbox li, .jq-selectbox li": {
+                "background-color": "@fieldColor",
+                "color": "contrast(@fieldColor, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox li:hover, .jq-selectbox li.selected": {
+                "background-color": "@fieldHover",
+                "color": "contrast(@fieldHover, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox:hover .jq-selectbox__trigger-arrow": {
+                "border-top-color": "@fieldColor"
+              },
+              ".jq-selectbox .jq-selectbox__trigger-arrow": {
+                "border-top-color": "@fieldHover"
+              }
+            },
+            "H2": {
+              "color": "#36404c"
+            },
+            "@media (max-width: 767px)": {
+              ".col-auto": {
+                "margin": "auto"
+              }
+            },
+            "H3": {
+              "color": "#ffffff"
+            },
+            "H4": {
+              "color": "#36404c"
+            }
+          },
+          "_name": "form01",
+          "_customHTML": "<section class=\"form01\" group=\"Form\" plugins=\"formstyler\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"9\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n        <header>Title</header>\n        <input type=\"checkbox\" title=\"Show Sub Title\" name=\"showsubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#ed4266\" selected condition=\"showTitle\">\n        <header>Style</header>\n        <input type=\"color\" title=\"Form Background\" name=\"formbg\" value=\"#ffffff\" selected>\n        <input type=\"color\" title=\"Border Color\" name=\"border\" value=\"#ffffff\" selected>\n\n        <header>Form Style</header>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\" checked>\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#f5f5f7\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#ebeced\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#ebeced\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Text\" value=\"#767676\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#c1c1c1\" condition=\"customStyle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/face2.jpeg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div mbr-form class=\"col-lg-6 mx-auto mbr-form form-col md-pb\">\n                <div class=\"form-wrap\">\n                    <div class=\"align-left\">\n                        <h4 class=\"mbr-section-title mbr-semibold pb-1 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showsubTitle\">משל טוב</h4>\n                        <h2 class=\"mbr-section-title mbr-bold pb-1 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">צור קשר לקבלת המתנה</h2>\n\n                        <div class=\"line-wrap\" mbr-if=\"showTitle\">\n                            <div class=\"line\"></div>\n                        </div>\n                    </div>\n                    <form action=\"gogidon@012.net.il\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                        <div class=\"form-row\">\n                            <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">אנחנו חוזרים עד 24 שעות</div>\n                            <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">Oops...! some\n                                problem!</div>\n                        </div>\n                        <div class=\"dragArea form-row\">\n                            <div class=\"col-lg-6 form-group\" style data-for=\"phone\">\n                                <input type=\"tel\" name=\"phone\" placeholder=\"טלפון\" data-form-field=\"phone\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\">\n                            </div>\n                            <div class=\"col-lg-6 form-group\" data-for=\"email\">\n                                <input type=\"email\" name=\"email\" placeholder=\"דואל\" data-form-field=\"email\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\">\n                            </div>\n                            <div class=\"col-lg-6 form-group\" data-for=\"name\">\n                                <input type=\"text\" name=\"name\" placeholder=\"שם מלה\" data-form-field=\"name\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\">\n                            </div>\n                            <div class=\"col-lg-6 form-group\" data-for=\"title\">\n                                <input type=\"text\" name=\"Title\" placeholder=\"Title\" data-form-field=\"Title\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\" hidden=\"hidden\">\n                            </div>\n                            <div class=\"col-lg-12 form-group\" data-for=\"message\" style>\n                                <textarea name=\"message\" placeholder=\"מלל\" data-form-field=\"message\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\"></textarea>\n                            </div>\n                            <div class=\"mbr-section-btn\" mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrLink,-mbrBtnRemove\"><a type=\"submit\" class=\"btn btn-sm btn-secondary\" data-app-placeholder=\"Type Text\">Send</a></div>\n                        </div>\n                    </form>\n                </div>\n            </div>\n            <div class=\"col-lg-6 m-auto\">\n                <div class=\"text-wrap m-auto\">\n                    <h3 class=\"mbr-section-title mbr-bold pb-1 mbr-fonts-style\" mbr-theme-style=\"display-1\">מזל טוב על הזכיה</h3>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rNm663rCyU",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "form01-2"
+        }
+      ]
+    }
+  }
+}
